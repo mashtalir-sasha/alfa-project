@@ -1,0 +1,593 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.5
+	font-family: $default-font
+	overflow-x: hidden
+	background-color: #161616
+	color: #fff
+	input, textarea
+		outline: none
+
+.img-r
+	display: block
+	max-width: 100%
+	height: auto
+
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
+
+a:hover
+	text-decoration: none
+	color: initial
+
+a:focus
+	outline: none
+
+button
+	border: none
+	background-color: transparent
+	outline: none
+	&:focus
+		outline: none
+
+ul
+	list-style-type: none
+	margin-bottom: 0
+	padding-left: 0
+
+.grid
+	position: fixed
+	width: 100%
+	height: 100vh
+	.line
+		position: absolute
+		top: 0
+		width: 1px
+		height: 100%
+		background-color: rgba(#C4C4C4 ,.25)
+		&_1
+			left: 8.33333%
+		&_2
+			left: 25%
+		&_3
+			left: 41.66667%
+		&_4
+			left: 58.33333%
+		&_5
+			left: 75%
+		&_6
+			left: 91.66667%
+
+.p20	
+	padding: 0 20px
+
+.first-form
+	padding: 50px 0
+	&-item
+		max-width: 300px
+		padding-left: 60px
+		background-position: top left
+		background-size: 50px 50px
+		background-repeat: no-repeat
+		margin-bottom: 30px
+		&:last-child
+			margin-bottom: 0
+		&__ttl
+			position: relative
+			display: table
+			margin: 0 auto
+			font-family: $title
+			font-size: 20px
+			&:before
+				content: ''
+				width: 22px
+				height: 1px
+				background-color: #fff
+				position: absolute
+				top: 50%
+				left: -30px
+			&:after
+				content: ''
+				width: 22px
+				height: 1px
+				background-color: #fff
+				position: absolute
+				top: 50%
+				right: -30px
+		&__txt
+			max-width: 200px
+			margin: 0 auto
+			color: #BDBDBD
+			text-align: center
+		&_i1
+			background-image: url(../img/first-form_ico1.svg)
+		&_i2
+			background-image: url(../img/first-form_ico2.svg)
+		&_i3
+			background-image: url(../img/first-form_ico3.svg)
+	&__form
+		padding-left: 20px
+	&__ttl
+		font-family: $bold
+		font-size: 25px
+		letter-spacing: .05em
+		margin-bottom: 20px
+		span
+			color: $accent
+	&__txt
+		letter-spacing: -.05em
+		margin-bottom: 20px
+	.rline
+		position: relative
+		margin: 0 auto 20px
+		.field
+			display: block
+			width: 100%
+			max-width: 320px
+			border: 0
+			background: #FFFFFF
+			box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.25)
+			border-radius: 50px
+			text-align: center
+			padding: 12px 0
+		.rfield_error
+			visibility: hidden
+			position: absolute
+			bottom: 0
+			right: 15px
+			color: $accent
+			font-size: 12px
+	&__btn
+		cursor: pointer
+		display: block
+		max-width: 320px
+		float: right
+		font-family: $semi
+		font-size: 16px
+		color: #fff
+		padding: 10px 30px
+		background: linear-gradient(180deg, #A80707 0%, #C43434 100%), linear-gradient(0deg, #D12F2F, #D12F2F)
+		border-radius: 50px
+		transition: all ease .3s
+		&:hover
+			color: darken(#fff, 30%)
+
+.checkbox
+	position: relative
+	margin-bottom: 20px
+	input
+		position: absolute
+		z-index: -1
+		opacity: 0
+	&__text
+		display: block
+		position: relative
+		padding: 0 0 0 40px
+		cursor: pointer
+		font-size: 14px
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 25px
+			height: 25px
+			border-radius: 50%
+			background: #fff
+			transition: .3s
+.checkbox input:checked + .checkbox__text:before
+	background: $accent
+
+.projects
+	padding: 50px 0
+	&__note
+		width: 300px
+		height: 100px
+		font-family: $modern
+		font-size: 100px
+		line-height: 1
+		color: rgba(#F4F4F4, .06)
+		transform: rotateZ(270deg)
+		position: absolute
+		bottom: 100px
+		left: 50%
+		margin-left: -150px
+	&__ttl
+		font-family: $title
+		font-size: 30px
+		letter-spacing: .05em
+		max-width: 740px
+		margin: 0 auto
+		span
+			color: $accent
+	&__txt
+		display: table
+		position: relative
+		font-family: $semi
+		font-size: 18px
+		margin-bottom: 20px
+		&:before
+			content: ''
+			width: 95px
+			height: 1px
+			background-color: $accent
+			position: absolute
+			top: 50%
+			right: -120px
+	&-slider
+		&__slide
+			outline: none
+			margin: 0 10px
+	.slick-arrow
+		cursor: pointer
+		font-size: 0
+		display: block
+		width: 40px
+		height: 40px
+		background-color: #fff
+		position: absolute
+		top: 50%
+		margin-top: -20px
+		z-index: 2
+		transition: all ease .3s
+		&:hover
+			background: linear-gradient(180deg, #A80707 0%, #C43434 100%), linear-gradient(0deg, #D12F2F, #D12F2F)
+		&.slick-prev
+			left: 0
+			&:before
+				content: ''
+				width: 20px
+				height: 20px
+				background-size: 20px 20px
+				background-image: url(../img/arr_prev.svg)
+				position: absolute
+				top: 50%
+				margin-top: -10px
+				left: 50%
+				margin-left: -10px
+				transition: all ease .3s
+			&:hover
+				&:before
+					background-image: url(../img/arr_prev_hov.svg)
+		&.slick-next
+			right: 0
+			&:before
+				content: ''
+				width: 20px
+				height: 20px
+				background-size: 20px 20px
+				background-image: url(../img/arr_next.svg)
+				position: absolute
+				top: 50%
+				margin-top: -10px
+				left: 50%
+				margin-left: -10px
+				transition: all ease .3s
+			&:hover
+				&:before
+					background-image: url(../img/arr_next_hov.svg)
+
+.second-form
+	background-color: #000
+	padding: 50px 0
+	.d-flex
+		margin-bottom: 40px
+		&.last
+			margin-bottom: 0
+	&__ttl
+		font-family: $title
+		font-size: 30px
+		margin-bottom: 20px
+		span
+			color: $accent
+	&__subttl
+		font-family: $title
+		font-size: 18px
+		margin-bottom: 20px
+	&-form
+		max-width: 290px
+	&__txt
+		font-size: 18px
+		margin-bottom: 20px
+	.rline
+		position: relative
+		margin: 0 auto 20px
+		.field
+			display: block
+			width: 100%
+			max-width: 320px
+			border: 0
+			background: #FFFFFF
+			box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.25)
+			border-radius: 50px
+			text-align: center
+			padding: 12px 0
+		.rfield_error
+			visibility: hidden
+			position: absolute
+			bottom: 0
+			right: 15px
+			color: $accent
+			font-size: 12px
+	&__btn
+		cursor: pointer
+		display: block
+		width: 100%
+		font-family: $semi
+		font-size: 14px
+		color: #fff
+		padding: 14px 30px
+		background: linear-gradient(180deg, #A80707 0%, #C43434 100%), linear-gradient(0deg, #D12F2F, #D12F2F)
+		border-radius: 50px
+		transition: all ease .3s
+		&:hover
+			color: darken(#fff, 30%)
+	&__label
+		cursor: pointer
+		margin: 0 20px
+		flex: 0 0 33.33333%
+		max-width: 33.33333%
+		&:first-child
+			margin-left: 0
+		&:last-child
+			margin-right: 0
+		input
+			position: absolute
+			z-index: -1
+			opacity: 0
+		img
+			display: block
+			margin: 0 auto 10px
+		p
+			text-align: center
+			font-family: $title
+			font-size: 14px
+			transition: all ease .3s
+
+.second-form__label input[type="radio"]:checked +img + p
+	color: $accent
+	text-decoration: underline
+
+.ui-slider
+	border-top: 2px solid #C4C4C4
+	margin-bottom: 40px
+	&-range
+		top: -2px !important
+		height: 2px !important
+		background-color: #C4C4C4
+	&-handle
+		top: -8px !important
+		outline: none
+		position: relative
+		width: 16px !important
+		height: 16px !important
+		border-radius: 50%
+		background-color: $accent
+		span
+			display: block
+			width: 40px
+			position: absolute
+			bottom: -20px
+			font-size: 11px
+
+.about
+	padding: 50px 0
+	&__note
+		width: 490px
+		height: 100px
+		font-family: $modern
+		font-size: 100px
+		line-height: 1
+		color: rgba(#F4F4F4, .06)
+		transform: rotateZ(270deg)
+		position: absolute
+		bottom: 190px
+		left: 50%
+		margin-left: -245px
+	&__ttl
+		font-family: $title
+		font-size: 30px
+		text-align: center
+		margin-bottom: 50px
+		span
+			color: $accent
+	&__txt
+		text-align: center
+		margin-bottom: 20px
+	&__img
+		margin: 0 auto
+	&__wrap
+		padding: 0 60px
+	&-item
+		margin-bottom: 40px
+		&:last-child
+			margin-bottom: 0
+		&__ttl
+			display: table
+			position: relative
+			font-family: $title
+			font-size: 18px
+			color: $accent
+			letter-spacing: 0.1em
+			margin-bottom: 20px
+			&:before
+				content: ''
+				width: 22px
+				height: 1px
+				background-color: #fff
+				position: absolute
+				top: 50%
+				left: -30px
+			&:after
+				content: ''
+				width: 22px
+				height: 1px
+				background-color: #fff
+				position: absolute
+				top: 50%
+				right: -30px
+		&__txt
+			font-size: 14px
+
+.third-form
+	padding: 50px 0
+	&__ttl
+		font-family: $title
+		font-size: 30px
+		margin-bottom: 20px
+		span
+			color: $accent
+	&-form
+		max-width: 290px
+	&__txt
+		font-size: 18px
+		margin-bottom: 20px
+	.rline
+		position: relative
+		margin: 0 auto 20px
+		.field
+			display: block
+			width: 100%
+			max-width: 320px
+			border: 0
+			background: #FFFFFF
+			box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.25)
+			border-radius: 50px
+			text-align: center
+			padding: 12px 0
+		.rfield_error
+			visibility: hidden
+			position: absolute
+			bottom: 0
+			right: 15px
+			color: $accent
+			font-size: 12px
+	&__btn
+		cursor: pointer
+		display: block
+		width: 100%
+		font-family: $semi
+		font-size: 14px
+		color: #fff
+		padding: 14px 30px
+		background: linear-gradient(180deg, #A80707 0%, #C43434 100%), linear-gradient(0deg, #D12F2F, #D12F2F)
+		border-radius: 50px
+		transition: all ease .3s
+		&:hover
+			color: darken(#fff, 30%)
+	&__img
+		margin-bottom: 20px
+	&-block
+		display: table
+		float: right
+		&__name
+			font-family: $semi
+			font-size: 18px
+			color: $accent
+			text-align: right
+		&__txt
+			text-align: right
+		&__wrap
+			float: left
+		&__qoute
+			padding: 0 20px
+			display: table-cell
+			vertical-align: middle
+			max-width: 320px
+			font-size: 30px
+
+.contacts
+	background-color: #0C0C0C
+	padding: 50px 0
+	&__logo
+		max-width: 70%
+	&-list
+		&__item
+			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
+		a
+			color: #fff
+			transition: all ease .3s
+			&:hover
+				color: darken(#fff, 30%)
+	&-soc
+		display: table
+		margin: 0 auto 30px
+		&__link
+			display: inline-block
+			margin-right: 15px
+			&:last-child
+				margin-right: 0
+			img
+				width: 28px
+				height: 28px
+	&__cprt
+		font-size: 12px
+		color: #E0E0E0
+		text-align: center
+		margin-bottom: 6px
+		&:last-child
+			margin-bottom: 0
+	&__addr
+		text-align: right
+		color: #F2F2F2
+		margin-bottom: 30px
+	&__time
+		text-align: right
+		color: #F2F2F2
+		margin-bottom: 6px
+		&:last-child
+			margin-bottom: 0
+	&__phone
+		display: block
+		text-align: right
+		color: #fff
+		margin-bottom: 20px
+		transition: all ease .3s
+		&:hover
+			color: darken(#fff, 30%)
+	&__btn
+		display: block
+		max-width: 220px
+		float: right
+		font-family: $semi
+		font-size: 16px
+		color: #fff
+		padding: 10px 30px
+		margin-bottom: 100px
+		background: linear-gradient(180deg, #A80707 0%, #C43434 100%), linear-gradient(0deg, #D12F2F, #D12F2F)
+		border-radius: 50px
+		transition: all ease .3s
+		&:hover
+			color: darken(#fff, 30%)
+
+.dev
+	float: right
+	span
+		display: block
+		text-align: right
+		font-size: 12px
+		color: #F2F2F2
+		transition: all ease .3s
+	&:hover
+		span
+			color: darken(#F2F2F2, 30%)
+
+@import "media" // Always at the end
