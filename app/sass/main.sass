@@ -77,6 +77,176 @@ ul
 .p20	
 	padding: 0 20px
 
+.head
+	min-height: 100vh
+	max-height: 1080px
+	&__note
+		z-index: -1
+		width: 700px
+		height: 150px
+		font-family: $modern
+		font-size: 150px
+		line-height: 1
+		color: rgba(#F4F4F4, .06)
+		transform: rotateZ(270deg)
+		position: absolute
+		bottom: 350px
+		left: 50%
+		margin-left: -370px
+	&__wrap
+		position: relative
+		min-height: 100vh
+		max-height: 1080px
+	&__logo
+		padding: 0 10px
+		margin-top: 20px
+	&-soc
+		display: table
+		margin: 0 auto
+		position: absolute
+		top: 50%
+		margin-top: -78px
+		left: 50%
+		margin-left: -14px
+		&__link
+			display: block
+			margin-bottom: 15px
+			&:last-child
+				margin-bottom: 0
+			img
+				width: 28px
+				height: 28px
+	&-slider
+		background-color: #fff
+		.slick-dots
+			position: absolute
+			bottom: 0
+			left: 0
+			z-index: 1
+			li
+				min-width: 194px
+				display: none
+				&.slick-active
+					display: block
+					font-family: $modern
+					font-size: 80px
+					line-height: 1
+					background-color: #161616
+					padding: 50px 90px 50px 10px
+					button
+						color: $accent
+			.last
+				position: absolute
+				top: 40px
+				right: 25px
+				span
+					display: block
+					width: 1px
+					height: 60px
+					background-color: #fff
+					transform: rotateZ(20deg)
+				p
+					font-family: $modern
+					font-size: 30px
+					color: #fff
+					margin-top: -70px
+					margin-left: 20px
+		&__wrap
+			z-index: -1
+			width: 100%
+			position: absolute
+			top: 0
+			left: 0
+			&:before
+				content: ''
+				width: 100%
+				height: 100%
+				background-color: rgba(#000, .25)
+				position: absolute
+				top: 0
+				left: 0
+				z-index: 1
+		&__slide
+			outline: none
+		&__bg
+			min-height: 100vh
+			max-height: 1080px
+			width: 100%
+			height: 100%
+			background-position: center center
+			background-repeat: no-repeat
+			background-size: cover
+			&_1
+				background-image: url(../img/head_bg1.jpg)
+			&_2
+				background-image: url(../img/head_bg1.jpg)
+			&_3
+				background-image: url(../img/head_bg1.jpg)
+			&_4
+				background-image: url(../img/head_bg1.jpg)
+			&_5
+				background-image: url(../img/head_bg1.jpg)
+			&_6
+				background-image: url(../img/head_bg1.jpg)
+			&_7
+				background-image: url(../img/head_bg1.jpg)
+			&_8
+				background-image: url(../img/head_bg1.jpg)
+	&-mnu
+		display: table
+		margin: 20px auto 0
+		&__item
+			display: inline-block
+			font-family: $bold
+			margin-right: 40px
+			&:last-child
+				margin-right: 0
+			a
+				color: #fff
+				transition: all ease .3s
+				&:hover
+					color: darken(#fff, 10%)
+	&-ttl
+		min-width: 760px
+		position: absolute
+		top: 50%
+		right: 20px
+		margin-top: -90px
+		span
+			position: relative
+			display: table
+			&:first-child
+				&:before
+					content: ''
+					width: 60px
+					height: 3px
+					background-color: #fff
+					position: absolute
+					top: 40px
+					left: -80px
+			&:last-child
+				&:before
+					content: ''
+					width: 60px
+					height: 3px
+					background-color: #fff
+					position: absolute
+					top: 40px
+					right: -80px
+		&__txt
+			text-align: right
+			font-family: $bold
+			font-size: 20px
+		&__ttl
+			font-family: $modern-b
+			font-size: 50px
+	&-txt
+		font-family: $bold
+		font-size: 28px
+		position: absolute
+		bottom: 120px
+		right: 20px
+
 .first-form
 	padding: 50px 0
 	&-item
@@ -234,6 +404,11 @@ ul
 		&__slide
 			outline: none
 			margin: 0 10px
+			padding-bottom: 20px
+			border-bottom: 1px solid #B6B6B6
+			transition: all ease .3s
+			&:hover
+				border-color: $accent
 	.slick-arrow
 		cursor: pointer
 		font-size: 0
@@ -340,13 +515,13 @@ ul
 			color: darken(#fff, 30%)
 	&__label
 		cursor: pointer
-		margin: 0 20px
+		padding: 0 20px
 		flex: 0 0 33.33333%
 		max-width: 33.33333%
 		&:first-child
-			margin-left: 0
+			padding: 0
 		&:last-child
-			margin-right: 0
+			padding: 0
 		input
 			position: absolute
 			z-index: -1
@@ -385,6 +560,227 @@ ul
 			position: absolute
 			bottom: -20px
 			font-size: 11px
+
+.team
+	padding: 50px 0
+	&__ttl
+		max-width: 730px
+		font-family: $title
+		font-size: 30px
+		letter-spacing: .05em
+		margin: 0 auto 50px
+		span
+			color: $accent
+	&-slider
+		&__slide
+			opacity: 0.5
+			outline: none
+			display: flex !important
+			transition: all ease .3s
+			&.slick-active
+				opacity: 1
+		&__img
+			margin: 0 auto
+		&__txt
+			max-width: 500px
+			font-family: $semi
+			font-size: 12px
+			letter-spacing: .05em
+			&.last
+				margin-top: 20px
+				float: right
+		&__wrap
+			padding: 0 20px
+			overflow: hidden
+		&__btn
+			cursor: pointer
+			display: block
+			width: 100%
+			max-width: 320px
+			font-family: $semi
+			font-size: 14px
+			text-align: center
+			color: #fff
+			padding: 14px 30px
+			margin: 20px 0 0 20px
+			background: linear-gradient(180deg, #A80707 0%, #C43434 100%), linear-gradient(0deg, #D12F2F, #D12F2F)
+			border-radius: 50px
+			transition: all ease .3s
+			&:hover
+				color: darken(#fff, 30%)
+		.slick-arrow
+			cursor: pointer
+			font-size: 0
+			display: block
+			width: 40px
+			height: 40px
+			background-color: #fff
+			position: absolute
+			top: 50%
+			margin-top: -20px
+			z-index: 2
+			transition: all ease .3s
+			&:hover
+				background: linear-gradient(180deg, #A80707 0%, #C43434 100%), linear-gradient(0deg, #D12F2F, #D12F2F)
+			&.slick-prev
+				left: 8.33333%
+				&:before
+					content: ''
+					width: 20px
+					height: 20px
+					background-size: 20px 20px
+					background-image: url(../img/arr_prev.svg)
+					position: absolute
+					top: 50%
+					margin-top: -10px
+					left: 50%
+					margin-left: -10px
+					transition: all ease .3s
+				&:hover
+					&:before
+						background-image: url(../img/arr_prev_hov.svg)
+			&.slick-next
+				right: 8.33333%
+				&:before
+					content: ''
+					width: 20px
+					height: 20px
+					background-size: 20px 20px
+					background-image: url(../img/arr_next.svg)
+					position: absolute
+					top: 50%
+					margin-top: -10px
+					left: 50%
+					margin-left: -10px
+					transition: all ease .3s
+				&:hover
+					&:before
+						background-image: url(../img/arr_next_hov.svg)
+		.slick-dots
+			display: table
+			padding-left: 0
+			list-style-type: none
+			margin-bottom: 0
+			position: relative
+			bottom: -20px
+			left: 0
+			right: 0
+			margin-right: auto
+			margin-left: auto
+			li
+				cursor: pointer
+				display: inline-block
+				margin-right: 7px
+				font-size: 0
+				width: 75px
+				height: 2px
+				background-color: #B6B6B6
+				&:last-child
+					margin-right: 0
+				&.slick-active
+					background-color: $accent
+
+.steps
+	&__note
+		width: 430px
+		height: 100px
+		font-family: $modern
+		font-size: 100px
+		line-height: 1
+		color: rgba(#F4F4F4, .06)
+		transform: rotateZ(270deg)
+		position: absolute
+		bottom: -150px
+		left: 50%
+		margin-left: -215px
+	&__ttl
+		max-width: 470px
+		font-family: $title
+		font-size: 30px
+		letter-spacing: .05em
+		margin-bottom: 50px
+		span
+			color: $accent
+	&__subttl
+		font-family: $modern
+		font-size: 18px
+		color: #E0E0E0
+		margin-bottom: 20px
+	&-link
+		cursor: pointer
+		position: relative
+		font-size: 14px
+		color: #BDBDBD
+		margin-bottom: 10px
+		padding-left: 30px
+		transition: all ease .3s
+		&:before
+			content: ''
+			width: 15px
+			height: 15px
+			border-radius: 50%
+			background-color: #F2F2F2
+			position: absolute
+			top: 3px
+			left: 0
+			transition: all ease .3s
+		&.active
+			font-family: $bold
+			font-size: 16px
+			color: $accent
+			&:before
+				background-color: $accent
+				top: 5px
+	&-slider
+		.slick-dots
+			position: absolute
+			top: -120px
+			left: 40%
+			z-index: 1
+			li
+				display: none
+				&.slick-active
+					display: block
+					font-family: $modern
+					font-size: 50px
+					line-height: 1
+					padding: 50px 90px 50px 0
+					button
+						min-width: 63px
+						color: $accent
+			.last
+				position: absolute
+				top: 40px
+				right: 25px
+				span
+					display: block
+					width: 1px
+					height: 50px
+					background-color: #fff
+					transform: rotateZ(20deg)
+				p
+					font-family: $modern
+					font-size: 20px
+					color: #fff
+					margin-top: -60px
+					margin-left: 20px
+		&__slide
+			outline: none
+		&__left
+			float: left
+			width: 40%
+			padding-right: 20px
+		&__img
+			float: right
+			width: 60%
+		&__ttl
+			font-family: $modern-l
+			font-size: 20px
+			margin-bottom: 20px
+		&__txt
+			font-size: 14px
+			color: #BFBFBF
+			letter-spacing: .05em
 
 .about
 	padding: 50px 0
@@ -442,6 +838,175 @@ ul
 				position: absolute
 				top: 50%
 				right: -30px
+		&__txt
+			font-size: 14px
+
+.reviews
+	padding: 50px 0
+	&__ttl
+		font-family: $title
+		font-size: 30px
+		letter-spacing: .05em
+		color: $accent
+		text-align: center
+		margin-bottom: 40px
+	&-slider
+		&__slide
+			outline: none
+			display: flex !important
+		&__ttl
+			font-family: $modern-m
+			font-size: 20px
+			letter-spacing: .01em
+			margin-bottom: 20px
+		&__txt
+			font-family: $semi
+			font-size: 14px
+			letter-spacing: .05em
+			margin-bottom: 20px
+		&__link
+			position: relative
+			display: table
+			font-family: $semi
+			font-size: 14px
+			letter-spacing: .05em
+			color: $accent
+			transition: all ease .3s
+			&:before
+				content: ''
+				width: 22px
+				height: 1px
+				background-color: $accent
+				position: absolute
+				top: 11px
+				right: -25px
+				transition: all ease .3s
+			&:hover
+				color: darken($accent, 5%)
+				&:before
+					background-color: darken($accent, 5%)
+					right: -35px
+		&__img
+			padding: 5px
+		.slick-arrow
+			cursor: pointer
+			font-size: 0
+			display: block
+			width: 40px
+			height: 40px
+			background-color: #fff
+			position: absolute
+			top: 50%
+			margin-top: -20px
+			z-index: 2
+			transition: all ease .3s
+			&:hover
+				background: linear-gradient(180deg, #A80707 0%, #C43434 100%), linear-gradient(0deg, #D12F2F, #D12F2F)
+			&.slick-prev
+				left: 8.33333%
+				&:before
+					content: ''
+					width: 20px
+					height: 20px
+					background-size: 20px 20px
+					background-image: url(../img/arr_prev.svg)
+					position: absolute
+					top: 50%
+					margin-top: -10px
+					left: 50%
+					margin-left: -10px
+					transition: all ease .3s
+				&:hover
+					&:before
+						background-image: url(../img/arr_prev_hov.svg)
+			&.slick-next
+				right: 8.33333%
+				&:before
+					content: ''
+					width: 20px
+					height: 20px
+					background-size: 20px 20px
+					background-image: url(../img/arr_next.svg)
+					position: absolute
+					top: 50%
+					margin-top: -10px
+					left: 50%
+					margin-left: -10px
+					transition: all ease .3s
+				&:hover
+					&:before
+						background-image: url(../img/arr_next_hov.svg)
+
+.licenses
+	padding: 50px 0
+	&__note
+		width: 300px
+		height: 100px
+		font-family: $modern
+		font-size: 100px
+		line-height: 1
+		color: rgba(#F4F4F4, .06)
+		transform: rotateZ(270deg)
+		position: absolute
+		bottom: 100px
+		left: 50%
+		margin-left: -150px
+	&__ttl
+		font-family: $title
+		font-size: 30px
+		letter-spacing: .05em
+		text-align: center
+		margin-bottom: 50px
+		span
+			color: $accent
+	&-item
+		display: inline-block
+		max-width: 220px
+		margin-right: 60px
+		&:last-child
+			margin-right: 0
+		&__numb
+			width: 77px
+			height: 77px
+			background: linear-gradient(180deg, #A80707 0%, #C43434 100%), linear-gradient(0deg, #D12F2F, #D12F2F)
+			border-radius: 50%
+			font-family: $modern-b
+			font-size: 20px
+			line-height: 77px
+			text-align: center
+			margin-bottom: 20px
+	&-block
+		position: relative
+		max-width: 580px
+		min-height: 260px
+		margin-top: 90px
+		&.first
+			float: right
+			padding-right: 200px
+			&:before
+				content: ''
+				width: 571px
+				height: 483px
+				background-image: url(../img/license1.png)
+				position: absolute
+				top: -130px
+				right: -210px
+		&.second
+			padding-left: 200px
+			&:before
+				content: ''
+				width: 744px
+				height: 670px
+				background-image: url(../img/license2.png)
+				position: absolute
+				top: -220px
+				left: -300px
+		&__ttl
+			font-family: $modern-m
+			font-size: 18px
+			letter-spacing: .01em
+			color: $accent
+			margin-bottom: 20px
 		&__txt
 			font-size: 14px
 
@@ -509,12 +1074,23 @@ ul
 			padding: 0 20px
 			display: table-cell
 			vertical-align: middle
-			max-width: 320px
 			font-size: 30px
+			max-width: 320px
 
 .contacts
+	position: relative
 	background-color: #0C0C0C
 	padding: 50px 0
+	margin-top: 40px
+	&:before
+		content: ''
+		width: 100%
+		height: 100px
+		background-color: #0C0C0C
+		position: absolute
+		top: -40px
+		left: 0
+		transform: skewY(-1.5deg)
 	&__logo
 		max-width: 70%
 	&-list
@@ -589,5 +1165,10 @@ ul
 	&:hover
 		span
 			color: darken(#F2F2F2, 30%)
+
+.head-slider
+	.slick-dots
+		button
+			color: #fff
 
 @import "media" // Always at the end

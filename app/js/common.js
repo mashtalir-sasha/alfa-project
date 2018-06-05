@@ -98,4 +98,61 @@ $(function() {
 		}
 	});
 
+	$('.team-slider').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		centerMode: true,
+		centerPadding: '15vw',
+		dots: true
+	});
+
+	$('.head-slider').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		autoplay: true,
+		dots: true
+	});
+
+	$('.head-slider .slick-dots li button').each( function(){
+		if ($(this).html() < 10) {
+			$(this).prepend('0');
+		}
+	});
+	var lastNumbHead = $('.head-slider .slick-dots li:last-child button').html();
+	$('.head-slider .slick-dots').append('<div class="last"><span></span><p>'+lastNumbHead+'</p></div>');
+
+	$('.reviews-slider').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		fade: true
+	});
+
+	$('.steps-slider').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		fade: true,
+		dots: true,
+		arrows: false
+	});
+
+	$('.steps-slider .slick-dots li button').each( function(){
+		if ($(this).html() < 10) {
+			$(this).prepend('0');
+		}
+	});
+	var lastNumbStep = $('.steps-slider .slick-dots li:last-child button').html();
+	$('.steps-slider .slick-dots').append('<div class="last"><span></span><p>'+lastNumbStep+'</p></div>');
+
+	$('.steps-link').click(function(){
+		var numb = $(this).data('slide');
+		$('.steps-slider').slick('slickGoTo', numb);
+		$(this).addClass('active').siblings().removeClass('active');
+	});
+
 });
