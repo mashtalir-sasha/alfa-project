@@ -51,6 +51,9 @@ ul
 	margin-bottom: 0
 	padding-left: 0
 
+.content
+	overflow-x: hidden
+
 .grid
 	position: fixed
 	width: 100%
@@ -78,7 +81,8 @@ ul
 	padding: 0 20px
 
 .head
-	min-height: 100vh
+	height: 100vh
+	min-height: 700px
 	max-height: 1080px
 	&__note
 		z-index: -1
@@ -95,7 +99,8 @@ ul
 		margin-left: -370px
 	&__wrap
 		position: relative
-		min-height: 100vh
+		height: 100vh
+		min-height: 700px
 		max-height: 1080px
 	&__logo
 		padding: 0 10px
@@ -118,6 +123,11 @@ ul
 				height: 28px
 	&-slider
 		background-color: #fff
+		&__slide
+			outline: none
+			height: 100vh
+			min-height: 700px
+			max-height: 1080px
 		.slick-dots
 			position: absolute
 			bottom: 0
@@ -169,7 +179,8 @@ ul
 		&__slide
 			outline: none
 		&__bg
-			min-height: 100vh
+			height: 100vh
+			min-height: 700px
 			max-height: 1080px
 			width: 100%
 			height: 100%
@@ -681,6 +692,7 @@ ul
 					background-color: $accent
 
 .steps
+	padding: 50px 0
 	&__note
 		width: 430px
 		height: 100px
@@ -959,12 +971,14 @@ ul
 		margin-bottom: 50px
 		span
 			color: $accent
+	&__wrap
+		overflow: hidden
 	&-item
-		display: inline-block
-		max-width: 220px
-		margin-right: 60px
+		float: left
+		max-width: 50%
+		padding-right: 60px
 		&:last-child
-			margin-right: 0
+			padding-right: 0
 		&__numb
 			width: 77px
 			height: 77px
@@ -1170,5 +1184,69 @@ ul
 	.slick-dots
 		button
 			color: #fff
+
+.p0
+	padding: 0 !important
+
+.modal
+	padding: 30px
+	background-color: #161616
+	max-width: 600px
+	&__ttl
+		text-align: center
+		font-family: $title
+		font-size: 30px
+		margin-bottom: 20px
+	&__txt
+		text-align: center
+		font-size: 18px
+		margin-bottom: 20px
+	.rline
+		position: relative
+		display: table
+		margin: 0 auto 20px
+		.field
+			display: block
+			width: 290px
+			border: 0
+			background: #FFFFFF
+			box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.25)
+			border-radius: 50px
+			text-align: center
+			padding: 12px 0
+		.rfield_error
+			visibility: hidden
+			position: absolute
+			bottom: 0
+			right: 15px
+			color: $accent
+			font-size: 12px
+	&__btn
+		cursor: pointer
+		display: block
+		width: 290px
+		margin: 0 auto
+		font-family: $semi
+		font-size: 14px
+		color: #fff
+		padding: 14px 30px
+		background: linear-gradient(180deg, #A80707 0%, #C43434 100%), linear-gradient(0deg, #D12F2F, #D12F2F)
+		border-radius: 50px
+		transition: all ease .3s
+		&:hover
+			color: darken(#fff, 30%)
+
+.thn
+	background-color: #161616
+	h3
+		text-align: center
+		font-family: $title
+		font-size: 25px
+		margin-bottom: 20px
+	p
+		text-align: center
+		font-size: 18px
+		margin-bottom: 20px
+
 
 @import "media" // Always at the end

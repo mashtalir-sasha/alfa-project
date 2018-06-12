@@ -9,38 +9,12 @@ $(function() {
 	e.preventDefault();
 	});
 
-	// Меню при скроле
-	$(window).scroll(function(){
-		var topline = $(window).scrollTop();
-		if ( topline > 650 ) {
-			$(".posf").addClass('show');
-		} else {
-			$(".posf").removeClass('show');
-		};
-	});
-
 	// Клик по гамбургеру на моб версии
-	$('.mob-mnu__humb').click(function() {
-		$('.mob-mnu-list').toggleClass('show');
+	$('.mnu-link').click(function() {
+		$('.head-mnu').toggleClass('show');
 	});
-	$('.mob-mnu__li').click(function() {
-		$('.mob-mnu-list').removeClass('show');
-	});
-
-	// Формирование полей и заголовков формы в мод окне
-	$('.modal').click(function(){
-		var ttl = $(this).data('title');
-		var subTtl = $(this).data('subtitle');
-		var text = $(this).data('text');
-		var btn = $(this).data('btn');
-		var goal = $(this).data('goal');
-		var subject = $(this).data('subject');
-		$('.ttl').html(ttl);
-		$('.subTtl').html(subTtl);
-		$('.text').html(text);
-		$('.btn').html(btn);
-		$('.goal').val(goal);
-		$('.subject').val(subject);
+	$('.head-mnu__item a').click(function() {
+		$('.head-mnu').removeClass('show');
 	});
 
 	// Отправка формы
@@ -64,24 +38,30 @@ $(function() {
 	});
 
 	// Инит фансибокса
-	$('.fancybox, .modal').fancybox({
+	$('.fancybox').fancybox({
 		margin: 0,
 		padding: 0
-	});
-
-	//Якорь наверх
-	$("[href='#top']").click(function(e){
-		$('html, body').stop().animate({
-			scrollTop: $('#top').offset().top
-		}, 300);
-		e.preventDefault();
 	});
 
 	$('.projects-slider').slick({
 		infinite: true,
 		slidesToShow: 4,
 		slidesToScroll: 1,
-		centerMode: true
+		centerMode: true,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
 	});
 
 	var handle = $( "#custom-handle" ).find('span');
@@ -104,7 +84,21 @@ $(function() {
 		slidesToScroll: 1,
 		centerMode: true,
 		centerPadding: '15vw',
-		dots: true
+		dots: true,
+		responsive: [
+			{
+				breakpoint: 993,
+				settings: {
+					centerPadding: '10vw'
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					centerMode: false,
+				}
+			}
+		]
 	});
 
 	$('.head-slider').slick({

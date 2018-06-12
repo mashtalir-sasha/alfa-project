@@ -1,38 +1,387 @@
 @import "vars"
 
-
-/*==========  Desktop First  ==========*/
-
-
-//Extra large: ≥1200px
+//Extra large: ≥1440px
 +media-breakpoint-down(xl)
 
-//Large: ≥992px
+//Large: ≥1200px  max-width: 1439px
 +media-breakpoint-down(lg)
+	.first-form
+		&__btn
+			font-size: 14px
+	.third-form
+		&-block
+			&__qoute
+				font-size: 24px
 
-//Medium: ≥768px
+//Medium: ≥992px max-width: 1199px
 +media-breakpoint-down(md)
+	.head
+		&-txt
+			font-size: 24px
+		&__note
+			font-size: 100px
+			width: 465px
+			height: 100px
+			bottom: 200px
+			margin-left: -242px
+		&-mnu
+			&__item
+				font-size: 14px
+	.first-form
+		.col-md-4
+			padding: 0 10px
+		.rline
+			.field
+				font-size: 14px
+		&__btn
+			float: none
+			margin: 0 auto
+	.second-form
+		.col-md-6
+			padding: 0 10px
+	.ui-slider
+		margin: 0 20px 40px
+	.about
+		.col-md-4
+			padding: 0 10px
+		&-item
+			&__ttl
+				&:before, &:after
+					display: none
+		&__wrap
+			padding: 0
+	.reviews-slider
+		margin-bottom: 60px
+		.slick-arrow
+			top: inherit
+			bottom: -60px
+		.col-sm-6, .col-sm-3
+			padding: 0 10px
+		&__img
+			padding: 0
+			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
+	.licenses
+		&__note
+			display: none
+		.col-md-6
+			padding: 0 10px
+		&-item
+			&:last-child
+				padding-right: 60px
+	.third-form
+		.col-md-6
+			padding: 0 10px
+		&-block
+			&__qoute
+				font-size: 20px
+	.contacts
+		.col-md-2, .col-md-3
+			padding: 0 10px
+		&-soc
+			&__link
+				margin-right: 10px
 
-//Small: ≥576px
+//Small: ≥768px max-width: 991px
 +media-breakpoint-down(sm)
+	.head
+		height: 672px
+		min-height: auto
+		&__wrap
+			height: auto
+			min-height: auto
+		&__logo
+			max-width: 140px
+			margin-bottom: 20px
+		&-soc
+			margin-top: -14px
+			left: inherit
+			margin-left: 0
+			right: 20px
+			&__link
+				display: inline-block
+				margin-right: 15px
+				margin-bottom: 0
+				&:last-child
+					margin-right: 0
+		&__note
+			display: none
+		&-slider
+			&__slide
+				height: 600px
+				min-height: inherit
+		&-mnu
+			&__item
+				margin-right: 20px
+		&-ttl
+			position: relative
+			min-width: inherit
+			top: inherit
+			right: inherit
+			margin-top: 90px
+			padding: 0 10px
+			&__ttl
+				font-size: 46px
+		&-txt
+			position: static
+			text-align: right
+			margin-top: 20px
+			padding: 0 10px
+	.first-form
+		&-item
+			margin: 0 auto 20px
+			&:last-child
+				margin-bottom: 20px
+		&__img
+			margin: 0 auto 20px
+		&__ttl
+			text-align: center
+		&__txt
+			text-align: center
+		.rline
+			display: table
+			margin: 0 auto 20px
+			input
+				min-width: 290px
+		.checkbox
+			max-width: 290px
+			margin: 0 auto 20px
+			display: table
+	.projects
+		&__note
+			display: none
+		&__txt
+			padding: 0 10px
+	.second-form
+		&-form
+			max-width: inherit
+			.rline
+				display: table
+				margin: 0 auto 20px
+				input
+					min-width: 290px
+		&__btn
+			max-width: 290px
+			margin: 0 auto
+	.steps
+		&__note
+			display: none
+		.col-sm-6, .col
+			padding: 0 10px
+		&-slider
+			&__left, &__img
+				width: 50%
+	.about
+		&__wrap
+			margin: 40px 0
+		&__note
+			display: none
+	.licenses-block.second
+		margin-top: 40px
+	.third-form
+		&-form
+			max-width: inherit
+			.rline
+				display: table
+				margin: 0 auto 20px
+				input
+					min-width: 290px
+		&__btn
+			max-width: 290px
+			margin: 0 auto 20px
+	.contacts
+		&__logo
+			max-width: 140px
+			margin: 0 auto 20px
+		&__btn
+			margin-bottom: 40px
+	.dev
+		display: table
+		margin: 40px auto 0
+		float: none
+		span
+			text-align: left
 
-//Extra small: >0
+//Extra small: ≥576px max-width: 767px
 +media-breakpoint-down(xs)
+	.mnu-link
+		width: 30px
+		height: 30px
+		background-image: url(../img/menu.svg)
+		background-size: 30px 30px
+		position: absolute
+		right: 20px
+		top: 0
+	.head
+		height: 572px
+		&-slider
+			&__slide
+				height: 500px
+			.slick-dots
+				li
+					min-width: 140px
+					&.slick-active
+						font-size: 30px
+						padding: 54px 20px 54px 20px
+				.last
+					top: 55px
+					span
+						height: 30px
+					p
+						margin-top: -50px
+		&-soc
+			right: 90px
+		&-mnu
+			position: absolute
+			width: 100%
+			top: 0
+			left: 0
+			z-index: 1
+			display: block
+			transition: all ease .3s
+			max-height: 0
+			padding: 0 10px
+			overflow: hidden
+			margin: 0
+			background-color: #161616
+			&.show
+				max-height: 500px
+			&__item
+				display: block
+				margin-right: 0
+				padding: 5px 0
+				&:first-child
+					margin-top: 20px
+				&:last-child
+					margin-bottom: 20px
+		&-ttl
+			&__ttl
+				font-size: 36px
+		&-txt
+			font-size: 20px
+	.first-form
+		&__form
+			padding-left: 0
+	.projects
+		.col-md-10
+			padding: 0 10px
+		&__ttl
+			font-size: 25px
+		&__txt
+			padding: 0
+	.second-form
+		&__ttl
+			font-size: 25px
+	.team
+		&__ttl
+			font-size: 25px
+			padding: 0 10px
+		&-slider
+			.slick-arrow
+				top: inherit
+				margin-top: inherit
+				bottom: 0
+				&.slick-next
+					right: 10px
+				&.slick-prev
+					left: 10px
+			&__img
+				max-width: 180px
+				margin-bottom: 20px
+			&__txt
+				&.last
+					float: none
+			&__btn
+				margin: 20px auto 0
+			&__slide
+				display: block !important
+	.steps
+		&__ttl
+			font-size: 25px
+		&-slider
+			margin-top: 20px
+			.slick-dots
+				left: inherit
+				right: 0
+				li
+					min-width: 140px
+					&.slick-active
+						font-size: 30px
+						padding: 54px 20px 54px 20px
+				.last
+					top: 55px
+					span
+						height: 30px
+					p
+						margin-top: -50px
+	.about
+		&__ttl
+			font-size: 25px
+	.reviews
+		&__ttl
+			font-size: 25px
+		&-slider
+			&__slide
+				display: block !important
+			&__link
+				margin-bottom: 20px
+			&__img
+				float: left
+				width: 50%
+				padding: 0 10px
+	.licenses
+		&__ttl
+			font-size: 25px
+	.third-form
+		&__ttl
+			font-size: 25px
 
-
-/*==========  Mobile First  ==========*/
-
-//Extra small: <576px
-+media-breakpoint-up(xs)
-
-//Small: ≤576px
-+media-breakpoint-up(sm)
-
-//Medium: ≤768px
-+media-breakpoint-up(md)
-
-//Large: ≤992px
-+media-breakpoint-up(lg)
-
-//Extra large: ≤1200px
-+media-breakpoint-up(xl)
+//Extra small: >0 max-width: 575px
++media-breakpoint-down(xxs)
+	.head
+		height: 772px
+		&-slider
+			&__slide
+				height: auto
+		&-soc
+			display: none
+	.steps-slider
+		margin-top: 90px
+	.team-slider
+		&__btn
+			margin-bottom: 40px
+	.licenses-block
+		&.first
+			margin-top: 40px
+			padding-right: 0
+			min-height: inherit
+			&:before
+				display: none
+		&.second
+			margin-top: 40px
+			padding-left: 0
+			min-height: inherit
+			&:before
+				display: none
+	.third-form
+		&-block
+			&__qoute
+				font-size: 14px
+	.contacts
+		&__addr
+			margin-top: 40px
+			text-align: left
+		&__time
+			text-align: left
+		&__phone
+			margin-top: 40px
+			text-align: left
+		&__btn
+			text-align: center
+			float: none
+			margin: 0 auto 40px
+	.modal
+		padding: 30px 10px
+		&__ttl
+			font-size: 25px
