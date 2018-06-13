@@ -4,7 +4,7 @@ $(function() {
 	$('.anchor').bind("click", function(e){
 		var anchor = $(this);
 		$('html, body').stop().animate({
-			scrollTop: $(anchor.attr('href')).offset().top-106 // отступ от меню
+			scrollTop: $(anchor.attr('href')).offset().top // отступ от меню
 		}, 500);
 	e.preventDefault();
 	});
