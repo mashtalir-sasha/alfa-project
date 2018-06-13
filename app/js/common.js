@@ -149,4 +149,20 @@ $(function() {
 		$(this).addClass('active').siblings().removeClass('active');
 	});
 
+	$(".scroll").each(function () {
+		var block = $(this);
+		$(window).scroll(function() {
+			var top = block.offset().top+75;
+			var bottom = block.height()+top;
+			top = top - $(window).height();
+			var scroll_top = $(this).scrollTop();
+			if ((scroll_top > top) && (scroll_top < bottom)) {
+				if (!block.hasClass("animated")) {
+					block.addClass("animated");
+					block.trigger('animatedIn');
+				}
+			}
+		});
+	});
+
 });
