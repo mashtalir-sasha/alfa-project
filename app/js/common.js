@@ -152,7 +152,11 @@ $(function() {
 	$(".scroll").each(function () {
 		var block = $(this);
 		$(window).scroll(function() {
-			var top = block.offset().top+75;
+			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+				var top = block.offset().top-75;
+			} else {
+				var top = block.offset().top+75;
+			}
 			var bottom = block.height()+top;
 			top = top - $(window).height();
 			var scroll_top = $(this).scrollTop();
