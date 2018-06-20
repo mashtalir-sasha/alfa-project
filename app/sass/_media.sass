@@ -163,15 +163,30 @@
 					min-width: 290px
 		&__btn
 			max-width: 290px
-			margin: 0 auto
+			margin: 0 auto 20px
 	.steps
 		&__note
 			display: none
-		.col-sm-6, .col
+		.col-md-5, .col
 			padding: 0 10px
 		&-slider
+			margin-top: 20px
 			&__left, &__img
 				width: 50%
+			.slick-dots
+				left: inherit
+				right: 0
+				li
+					min-width: 140px
+					&.slick-active
+						font-size: 30px
+						padding: 54px 20px 54px 20px
+				.last
+					top: 55px
+					span
+						height: 30px
+					p
+						margin-top: -50px
 	.about
 		&__wrap
 			margin: 40px 0
