@@ -27,5 +27,7 @@
 	if (!$title && !$phonenum) {
 	} else {
 		mail($to,"New lead(alfaproject.com)",$message,$headers); // Заменить домен на домен клиента
+
 	}
+	require_once('amoint.php');
 ?>
